@@ -64,6 +64,7 @@
     direnv
     gpu-screen-recorder
     mpv
+    gh
   ];
 
   programs = {
