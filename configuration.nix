@@ -5,8 +5,8 @@
     ./hardware-configuration.nix
   ];
 
-  networking.hostName = "enigma";
-  time.timeZone = "Africa/Casablanca";
+  networking.hostName = "firefoxos";
+  time.timeZone = "Europe/Berlin";
   system.stateVersion = "25.11";
 
   boot = {
@@ -73,8 +73,8 @@
     git = {
       enable = true;
       config = {
-        user.name = "CodesOtakuYT";
-        user.email = "taouaouilyas@gmail.com";
+        user.name = "JRSmile";
+        user.email = "jan@behead.de";
         init.defaultBranch = "main";
       };
     };
@@ -83,7 +83,7 @@
   services = {
     cage = {
       enable = true;
-      user = "codotaku";
+      user = "user";
       program = "${pkgs.firefox}/bin/firefox --kiosk http://127.0.0.1:8080";
     };
     code-server = {
@@ -91,7 +91,7 @@
       host = "127.0.0.1";
       port = 8080;
       auth = "none";
-      user = "codotaku";
+      user = "user";
       extraEnvironment = {
         XDG_RUNTIME_DIR = "/run/user/1000";
         WAYLAND_DISPLAY = "wayland-0";
